@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+
+        <!--Android 凹凸屏适配-->
+        <item name="android:windowLayoutInDisplayCutoutMode">
+            shortEdges <!-- default, shortEdges, never -->
+        </item>
+
+        <!--全屏设置-->
+        <!-- Adding fullscreen will just hide the status bar -->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+
+    </style>
+
+    <style name="FullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--全屏设置-->
+        <!-- Adding fullscreen will just hide the status bar -->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+        <!--启动页的背景图，App启动有一个初始化时间，如果不设置，会泛白-->
+        <item name="android:windowBackground">@mipmap/photo_bg</item>
+
+        <!--Android 凹凸屏适配 需要配合全屏设置一起，还需设置windowTranslucentStatus 为true才能statusbar透明-->
+        <item name="android:windowLayoutInDisplayCutoutMode">
+            shortEdges <!-- default, shortEdges, never -->
+        </item>
+    </style>
+
+</resources>
